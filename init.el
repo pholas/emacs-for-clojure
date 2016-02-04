@@ -10,7 +10,7 @@
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 ;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
 ;;                          ("melpa" . "http://melpa-stable.milkbox.net/packages/")))
@@ -68,9 +68,12 @@
     ;; git integration
     magit
 
-    ;;;;
+    ;; company auto complete
 
-    company))
+    company
+
+    ;; org mode
+    org))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -134,3 +137,5 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
+
+(add-hook 'after-init-hook 'global-company-mode)
