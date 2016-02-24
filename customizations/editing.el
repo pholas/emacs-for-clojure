@@ -70,3 +70,15 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
+
+;; org mode
+(setq org-default-notes-file (concat "~/jspace/gtd" "/main.org"))
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-cb" 'org-iswitchb)
+
+;; cider auto complete backed by company
+
+(global-set-key (kbd "M-TAB") #'company-complete) ; use M-TAB, a.k.a. C-M-i, as manual trigger
