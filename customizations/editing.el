@@ -52,7 +52,9 @@
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
 
 ;; yay rainbows!
-(global-rainbow-delimiters-mode t)
+;; (global-rainbow-delimiters-mode t) Note: Enabling use Emacs-wide has had problems with conflicting with other major modes, and so the global-rainbow-delimiters-mode has been removed.
+
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; use 2 spaces for tabs
 (defun die-tabs ()
@@ -73,12 +75,23 @@
 
 
 ;; org mode
-(setq org-default-notes-file (concat "~/jspace/gtd" "/main.org"))
+(setq org-default-notes-file (concat "~/myorg" "/main.org"))
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
-
+(setq org-agenda-files
+      '("main.org" "main.org_archive"))
+(setq org-refile-targets
+      '((nil :maxlevel . 3)
+        (org-agenda-files :maxlevel . 3)))
 ;; cider auto complete backed by company
 
+
 (global-set-key (kbd "M-TAB") #'company-complete) ; use M-TAB, a.k.a. C-M-i, as manual trigger
+
+;; google translate
+(global-set-key "\C-ct" 'google-translate-at-point)
+(global-set-key "\C-cT" 'google-translate-query-translate)
+(global-set-key (kbd "C-c r") 'google-translate-at-point-reverse)
+(global-set-key (kbd "C-c R") 'google-translate-query-translate-reverse)

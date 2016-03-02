@@ -73,7 +73,10 @@
     company
 
     ;; org mode
-    org))
+    org
+
+    ;; Google translate
+    google-translate))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -145,7 +148,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(coffee-tab-width 2)
- '(org-agenda-files (quote ("~/jspace/gtd/main.org"))))
+ '(org-agenda-files (quote ("~/Dropbox/myorg/main.org"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

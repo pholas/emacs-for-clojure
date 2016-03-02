@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("org-capture-last-stored"
+(("org-refile-last-stored"
+ (filename . "~/myorg/main.org")
+ (front-context-string . "*** Emacs       ")
+ (rear-context-string . "th English dict\n")
+ (position . 286))
+("org-capture-last-stored"
  (filename . "~/jspace/gtd/main.org")
  (front-context-string . "** TODO update e")
  (rear-context-string . "lace evernote]]\n")
