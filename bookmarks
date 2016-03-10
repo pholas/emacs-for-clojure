@@ -3,10 +3,10 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-refile-last-stored"
- (filename . "~/myorg/main.org")
- (front-context-string . "*** Emacs       ")
- (rear-context-string . "th English dict\n")
- (position . 286))
+ (filename . "~/Dropbox/myorg/main.org")
+ (front-context-string . "** TODO Replace ")
+ (rear-context-string . ")\n\n\n* Some day\n\n")
+ (position . 3688))
 ("org-capture-last-stored"
  (filename . "~/jspace/gtd/main.org")
  (front-context-string . "** TODO update e")

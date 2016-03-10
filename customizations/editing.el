@@ -85,6 +85,35 @@
 (setq org-refile-targets
       '((nil :maxlevel . 3)
         (org-agenda-files :maxlevel . 3)))
+
+(setq org-agenda-custom-commands
+      '(("Q" . "Custom queries") ;; gives label to "Q" 
+        ("Qa" "Archive search" search ""
+         ((org-agenda-files (file-expand-wildcards "~/archive/*.org")))) 
+        ("Qw" "Website search" search ""
+         ((org-agenda-files (file-expand-wildcards "~/website/*.org"))))
+        ("Qb" "Projects and Archive" search ""
+         ((org-agenda-text-search-extra-files (file-expand-wildcards "~/archive/*.org"))))
+                ;; searches both projects and archive directories
+        ("QA" "Archive tags search" org-tags-view "" 
+         ((org-agenda-files (file-expand-wildcards "~/archive/*.org"))))
+        ;; ...other commands here
+        ("H" "Office and Home Lists"
+         ((agenda)
+          (tags-todo "OFFICE")
+          (tags-todo "HOME")
+          (tags-todo "COMPUTER")
+          (tags-todo "DVD")
+          (tags-todo "READING")))
+        ("D" "Daily Action List"
+         ((agenda "" ((org-agenda-ndays 1)
+                      (org-agenda-sorting-strategy
+                       (quote ((agenda time-up priority-down tag-up) )))
+                      (org-deadline-warning-days 0)
+                      ))))
+         ))
+
+
 ;; cider auto complete backed by company
 
 
