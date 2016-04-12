@@ -75,11 +75,14 @@
 
 
 ;; org mode
-(setq org-default-notes-file (concat "~/myorg" "/main.org"))
+(setq org-directory "~/myorg")
+(setq org-default-notes-file (concat org-directory "/main.org"))
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+(setq org-agenda-include-diary t)
+(setq org-agenda-skip-scheduled-if-done t)
 (setq org-agenda-files
       '("main.org" "main.org_archive"))
 (setq org-refile-targets
