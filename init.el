@@ -70,7 +70,7 @@
     tagedit
 
     ;; git integration
-    magit
+    ;; magit  ;; not work with emacs 24.3.1 on Ubuntu 14.04 LTS
 
     ;; company auto complete
 
