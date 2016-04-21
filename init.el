@@ -1,6 +1,10 @@
 ;;;;
 ;; Packages
 ;;;;
+(setq url-proxy-services
+       '(("no_proxy" . "^\\(localhost\\|10.*\\)")
+         ("http" . "localhost:3129")
+         ("https" . "localhost:3129")))
 
 ;; Define package repositories
 (require 'package)

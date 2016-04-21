@@ -34,7 +34,8 @@
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height
 ;; (in lines high) Emacs will have whenever you start it
-(setq initial-frame-alist '((top . 0) (left . 0) (width . 180) (height . 68)))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;(setq initial-frame-alist '((top . 0) (left . 0) (width . 180) (height . 68)))
 
 ;; These settings relate to how emacs interacts with your operating system
 (setq ;; makes killing/yanking interact with the clipboard

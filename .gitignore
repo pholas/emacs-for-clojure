@@ -1,3 +1,4 @@
+.DS_Store
 .smex-items
 *~$
 places
@@ -8,3 +9,4 @@ projectile-bookmarks.eld
 projectile.cache
 auto-save-list
 backups
+elpa
